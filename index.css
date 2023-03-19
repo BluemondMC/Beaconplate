@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: Mojangles;
-  src: url('Mojangles.ttf');
+  src: url('fonts/Mojangles.ttf');
 }
 
 canvas#background {
@@ -102,7 +102,7 @@ div#root {
 
 div.screen {
   padding: 21px;
-  border-image-source: url(background.png);
+  border-image-source: url('assets/background.png');
   border-image-slice: 4 fill;
   border-image-width: 8px;
   overflow: scroll;
