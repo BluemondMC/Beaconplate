@@ -1,0 +1,159 @@
+* {
+  image-rendering: pixelated;
+  text-rendering: pixelated;
+  font-family: Mojangles;
+  font-size: 12px;
+}
+
+*[text-shadow="true"] {
+  text-shadow: 1.5px 1.5px #00000044;
+}
+
+@font-face {
+  font-family: Mojangles;
+  src: url('fonts/Mojangles.ttf');
+}
+
+canvas#background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -32767;
+}
+
+div.vignette {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -32766;
+  background-image: radial-gradient(#00000000,#00000000,#000000EE);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  border: 1.5px solid black;
+  background-color: rgb(100,100,100);
+  color: rgb(220,220,220);
+  text-shadow: 1.5px 1.5px #00000055;
+  box-shadow: -1.5px -3px 0px 0px #00000033 inset,
+  1.5px 1.5px 0px 0px #ffffff99 inset;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(100,100,200);
+  outline: 1.5px solid rgb(255,255,155);
+  color: rgb(255,255,155);
+}
+
+button > p#shortcut {
+  opacity: 0.5;
+  display: inline;
+}
+
+button > p#shortcut:before {
+  content: "(";
+}
+button > p#shortcut:after {
+  content: ")";
+}
+
+input[type="text"] {
+  border: 1.5px solid #333333;
+  background-color: rgb(119.85,119.85,119.85);
+  padding-inline-start: 1.5px;
+  padding-inline-end: 1.5px;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  color: white;
+}
+
+input[type="text"]:hover {
+  background-color: rgb(142,151,207);
+  border-color: #FFEE00;
+}
+
+input[type="text"]::placeholder {
+  color: #FFFFFF99;
+}
+input[type="text"]:hover::placeholder {
+  color: #00000000;
+}
+
+div#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+div.screen {
+  padding: 21px;
+  border-image-source: url('assets/background.png');
+  border-image-slice: 4 fill;
+  border-image-width: 8px;
+  overflow: scroll;
+  max-height: 80%;
+}
+
+div.screen > * {
+  margin-bottom: 3px;
+}
+
+div.screen > :last-child {
+  margin-bottom: 0px;
+}
+
+div.MainMenu {
+  width: 300px;
+  max-width: 80%;
+  min-width: 35.15625%;
+}
+
+div.ManifestScreen {
+  width: 300px;
+  max-width: 80%;
+  min-width: 35.15625%;
+  max-height: 80%;
+}
+
+div.ColorConverterScreen {
+  width: 300px;
+  max-width: 80%;
+  min-width: 35.15625%;
+  max-height: 80%;
+}
+
+div.CreditsScreen {
+  text-align: center;
+}
+
+div.TextViewport {
+  width: calc(100% - 4px);
+  max-height: 600px;
+  min-height: 26px;
+  box-shadow: -1.5px -1.5px 0px 0px #FFFFFF55 inset,
+  1.5px 1.5px 0px 0px #FFFFFF33 inset;
+  background-color: black;
+  padding: 2px;
+  outline: none;
+  transition: 0.5s;
+  color: white;
+}
+
+div.TextViewport:hover {
+  background-color: #999999;
+}
