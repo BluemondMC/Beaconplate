@@ -205,7 +205,7 @@ for (let i = 0; i < document.querySelectorAll("#RequestFullscreen").length; i++)
   const background = document.getElementById("background"),
   image = document.createElement('img'),
   ctx = background.getContext("2d");
-  image.src = 'assets/dirt.png';
+  image.src = 'dirt.png';
   let imgX = 0;
   
   image.onload = () => setInterval(() => {
