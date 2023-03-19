@@ -102,7 +102,7 @@ div#root {
 
 div.screen {
   padding: 21px;
-  border-image-source: url(background.png);
+  border-image-source: url('background.png');
   border-image-slice: 4 fill;
   border-image-width: 8px;
   overflow: scroll;
