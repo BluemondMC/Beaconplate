@@ -2,11 +2,11 @@
   image-rendering: pixelated;
   text-rendering: pixelated;
   font-family: Mojangles;
-  font-size: 15.25px;
+  font-size: 12px;
 }
 
 *[text-shadow="true"] {
-  text-shadow: 1.5px 1.5px #00000044;
+  text-shadow: 1.2px 1.2px #00000044;
 }
 
 @font-face {
