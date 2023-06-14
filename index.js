@@ -240,7 +240,7 @@ musicSrcArray = [
   "assets/music/creative5.ogg",
   "assets/music/creative6.ogg"
 ];
-window.onload = () => {
+window.onpointerup = () => {
   music.src = musicSrcArray[Math.floor(Math.random() * musicSrcArray.length)];
   music.load();
   setTimeout(() => {
