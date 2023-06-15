@@ -1,41 +1,26 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" type="text/css" media="all" />
-    <title>Beaconplate - By BluemondMC</title>
-  </head>
-  <body>
-    <canvas id="background"></canvas>
-    <div class="vignette"></div>
-    <audio loading="lazy" src="assets/music/creative8.ogg" id="music"></audio>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script defer src="index.js"></script>
     <div id="root">
-      <div class="screen MainMenu" id="MainMenu">
-        <button id="GenerateManifestButton">Generate Pack Manifest</button>
-        <button id="ColorConverterButton">Color Converter</button>
-        <button id="CreditsButton">Credits</button>
-        <button id="RequestFullscreen">Toggle Fullscreen <p id="shortcut">F11</p></button>
-      </div>
-      <div class="screen ManifestScreen" id="ManifestScreen">
-        <button id="back">Back to Main Menu</button>
-        <input id="ManifestPackName" type="text" placeholder="Name" class="TextArea" />
-        <input id="ManifestPackDescription" type="text" placeholder="Description" class="TextArea" />
-        <div contenteditable="true" id="Viewport" class="TextViewport"></div>
-        <button id="Generate">Generate!</button>
-      </div>
-      <div class="screen ColorConverterScreen" id="ColorConverterScreen">
-        <button id="back">Back to Main Menu</button>
-        <input placeholder="Red" type="text" class="TextArea" name="Red" id="Red" value="" />
-        <input placeholder="Green" type="text" class="TextArea" name="Green" id="Green" value="" />
-        <input placeholder="Blue" type="text" class="TextArea" name="Blue" id="Blue" value="" />
-        <div contenteditable="true" id="Viewport" class="TextViewport"></div>
-      </div>
-      <div class="CreditsScreen" id="CreditsScreen">
-        <button id="back">Back to Main Menu</button>
-        <p text-shadow="true">Creator & Developer: Bluemond</p>
-        <p text-shadow="true">Twitter: @bluemondmc</p>
-        <p text-shadow="true">©Bluemond - Do not re-distribute!</p>
-      </div>
+        <div background class="screen" id="MainMenu">
+            <button>Pack information file generator</button>
+            <button>Color converter</button>
+            <button>UI Size converter</button>
+            <button onclick="openScreen(CreditsScreen)">Credits</button>
+            <button onclick="toggleFullscreen()">Toggle fullscreen</button>
+        </div>
+        <div class="screen" id="CreditsScreen">
+            <h4>Beaconplate</h4>
+            <p>Creator: Bluemond</p>
+            <p>Music: C418</p>
+        </div>
     </div>
-    <script src="index.js"></script>
-  </body>
+</body>
 </html>
