@@ -1,10 +1,22 @@
+@font-face {
+    font-family: "Mojangles";
+    src: url("/assets/font/Mojangles.ttf");
+}
+
 :root {
     --button-hover-content-color: #ff9;
     --pixel-size: 2px;
 }
 
+@media screen {
+    
+}
+
 * {
-    font-size: calc(var(--pixel-size) * 7);
+    font-size: calc(var(--pixel-size) * 8);
+    font-family: "Mojangles";
+    image-rendering: pixelated;
+    box-sizing: border-box;
 }
 
 body, #root {
@@ -16,7 +28,7 @@ body, #root {
 
 #root {
     background-image: radial-gradient(#0005,black), url(assets/background.gif);
-    background-size: 100% 100%, calc(var(--pixel-size) * 32);
+    background-size: 100% 100%, calc(var(--pixel-size) * 64);
 }
 
 .screen {
@@ -25,12 +37,16 @@ body, #root {
     left: 50%;
     transform: translate(-50%,-50%);
     width: calc(var(--pixel-size) * 200);
+    max-width: 80%;
+    max-height: 80%;
+    color: white;
 }
 
 .screen[background] {
-    background-color: #CCCCCC;
-    padding: 8px;
-    border: calc(var(--pixel-size) * 2) outset #DDDDDD;
+    border-image: url("/assets/screenbg.png") 4 fill;
+    border-image-width: calc(var(--pixel-size) * 8);
+    border-image-outset: calc(var(--pixel-size) * 12);
+    color: #333;
 }
 .screen > * {
     margin-bottom: calc(var(--pixel-size) * 4);
@@ -58,4 +74,45 @@ button:hover {
     box-shadow: calc(var(--pixel-size) * -1) calc(var(--pixel-size) * -2) 0 0 #0002 inset,
     calc(var(--pixel-size) * 1) calc(var(--pixel-size) * 1) 0 0 #fff6 inset,
     0 0 0 calc(var(--pixel-size) * 1) var(--button-hover-content-color);
+}
+
+input, input[type="text"] {
+    border: calc(var(--pixel-size) * 1) solid rgb(100, 100, 100);
+    height: calc(var(--pixel-size) * 20);
+    width: 100%;
+    background-color: #999;
+    outline: none;
+    color: white;
+    box-shadow: calc(var(--pixel-size) * 1) calc(var(--pixel-size) * 1) 0 0 #0003;
+}
+
+input, input[type="text"]:hover {
+    transition: 0.1s;
+    background-color: rgb(100,100,200);
+    color: #ff9;
+    border-color: #ff9;
+}
+
+input, input[type="text"]::placeholder {
+    color: #fff9;
+}
+input, input[type="text"]:hover::placeholder {
+    color: #ff99;
+}
+
+#CreditsScreen * {
+    text-align: center;
+}
+
+.viewport {
+    width: 100%;
+    color: white;
+    background-color: black;
+    padding: calc(var(--pixel-size) * 2);
+    min-height: calc(var(--pixel-size) * 20);
+}
+
+.viewport:hover {
+    transition: 0.2s;
+    background-color: #727272;
 }

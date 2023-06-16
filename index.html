@@ -10,16 +10,26 @@
     <script defer src="index.js"></script>
     <div id="root">
         <div background class="screen" id="MainMenu">
-            <button>Pack information file generator</button>
+            <button onclick="openScreen(PackGeneratorScreen)">Pack information file generator</button>
             <button>Color converter</button>
             <button>UI Size converter</button>
             <button onclick="openScreen(CreditsScreen)">Credits</button>
             <button onclick="toggleFullscreen()">Toggle fullscreen</button>
         </div>
+        <div id="PackGeneratorScreen" background class="screen">
+            <button onclick="openScreen(MainMenu)">Back to Main Menu</button>
+            <input placeholder="Name" type="text"/>
+            <input placeholder="Description" type="text" />
+            <input placeholder="Type" type="text" />
+            <div contenteditable class="viewport"></div>
+            <button onclick="GenerateManifestBedrock()">Generate!</button>
+        </div>
         <div class="screen" id="CreditsScreen">
-            <h4>Beaconplate</h4>
+            <button onclick="openScreen(MainMenu)">Back to Main Menu</button>
+            <h2>Beaconplate</h2>
             <p>Creator: Bluemond</p>
             <p>Music: C418</p>
+            <p>Copyright Bluemond 2023, all rights reserved.</p>
         </div>
     </div>
 </body>
