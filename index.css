@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Mojangles";
-    src: url("/assets/font/Mojangles.ttf");
+    src: url("assets/font/Mojangles.ttf");
 }
 
 :root {
@@ -60,7 +60,7 @@ body, #root {
 }
 
 .screen[background] {
-    border-image: url("/assets/screenbg.png") 4 fill;
+    border-image: url("assets/screenbg.png") 4 fill;
     border-image-width: calc(var(--pixel-size) * 8);
     border-image-outset: calc(var(--pixel-size) * 12);
     color: #333;
