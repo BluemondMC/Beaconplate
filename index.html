@@ -11,8 +11,8 @@
     <div id="root">
         <div background class="screen" id="MainMenu">
             <button onclick="openScreen(PackGeneratorScreen)">Pack information file generator</button>
-            <button>Color converter</button>
-            <button>UI Size converter</button>
+            <button onclick="openScreen(ColorConverterScreen)">Color converter</button>
+            <button disabled>UI Size converter</button>
             <button onclick="openScreen(CreditsScreen)">Credits</button>
             <button onclick="toggleFullscreen()">Toggle fullscreen</button>
         </div>
@@ -21,8 +21,18 @@
             <input placeholder="Name" type="text"/>
             <input placeholder="Description" type="text" />
             <input placeholder="Type" type="text" />
+            <p>Output:</p>
             <div contenteditable class="viewport"></div>
             <button onclick="GenerateManifestBedrock()">Generate!</button>
+        </div>
+        <div background class="screen" id="ColorConverterScreen">
+            <button onclick="openScreen(MainMenu)">Back to Main Menu</button>
+            <input oninput="convertColor()" placeholder="Red / 255" type="text">
+            <input oninput="convertColor()" placeholder="Green / 255" type="text">
+            <input oninput="convertColor()" placeholder="Blue / 255" type="text">
+            <input oninput="convertColor()" placeholder="Alpha / 255" type="text">
+            <p>Output:</p>
+            <div oninput="convertColorBackwards()" contenteditable class="viewport"></div>
         </div>
         <div class="screen" id="CreditsScreen">
             <button onclick="openScreen(MainMenu)">Back to Main Menu</button>
